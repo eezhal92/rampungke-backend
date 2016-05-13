@@ -14,6 +14,6 @@ before_install: travis_retry composer self-update
 
 install: travis_retry composer install --no-interaction --prefer-source --dev
 
-after_install: php artisan key:generate
+before_script: php artisan key:generate
 
 script: vendor/bin/phpunit
