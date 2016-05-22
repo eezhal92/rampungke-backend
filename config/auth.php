@@ -14,7 +14,7 @@ return [
     */
 
     'defaults' => [
-        'guard' => 'web',
+        'guard' => 'doctrine',
         'passwords' => 'users',
     ],
 
@@ -45,6 +45,11 @@ return [
             'driver' => 'token',
             'provider' => 'users',
         ],
+
+        'doctrine' => [
+            'driver' => 'session',
+            'provider' => 'doctrine',
+        ]
     ],
 
     /*
@@ -68,6 +73,11 @@ return [
         'users' => [
             'driver' => 'eloquent',
             'model' => App\User::class,
+        ],
+
+        'doctrine' => [
+            'driver' => 'doctrine',
+            'model' => Rampungke\Domain\Entity\User::class,
         ],
 
         // 'users' => [

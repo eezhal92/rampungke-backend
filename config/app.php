@@ -156,7 +156,9 @@ return [
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
         LaravelDoctrine\ORM\DoctrineServiceProvider::class,
-        Tymon\JWTAuth\Providers\JWTAuthServiceProvider::class,
+        LaravelDoctrine\Migrations\MigrationsServiceProvider::class,
+        Tymon\JWTAuth\Providers\LaravelServiceProvider::class,
+        Rampungke\InfrastructureBundle\RampungkeInfrasuctureServiceProvider::class,
 
     ],
 
